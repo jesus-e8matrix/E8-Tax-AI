@@ -82,17 +82,12 @@ export default function LoginPage() {
               {/* Sign up */}
               <div className="flex items-center gap-3 text-sm text-neutral-600">
                 <span>Don't have an account?</span>
-                <button type="button" className="rounded-xl border border-blue-200 bg-blue-50 px-4 py-2 font-medium text-blue-700 hover:bg-blue-100">
-                  Sign up
-                </button>
-
-<Link
-  href="/register"
-  className="rounded-xl border border-blue-200 bg-blue-50 px-4 py-2 font-medium text-blue-700 hover:bg-blue-100"
->
-  Sign up
-</Link>
-
+                  <Link
+                    href="/register"
+                    className="rounded-xl border border-blue-200 bg-blue-50 px-4 py-2 font-medium text-blue-700 hover:bg-blue-100">
+                    Sign up
+                  </Link>
+                  
 
                 
               </div>
