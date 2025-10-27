@@ -20,7 +20,7 @@ const ForgotPasswordPage = () => {
   };
 
   return (
-    <div className="w-[40%] h-full flex items-center justify-center">
+    <div className="w-[40%] h-full flex items-center bg-white justify-center">
       <div className="w-[414px] h-[750px] flex flex-col justify-between">
         <div className="h-[50%] flex flex-col justify-between">
           <div className="h-[180px] flex flex-col justify-between">
@@ -81,5 +81,6 @@ const ForgotPasswordPage = () => {
 };
 
 export default ForgotPasswordPage;
+
 
 
