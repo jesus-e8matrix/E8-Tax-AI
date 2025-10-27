@@ -68,10 +68,12 @@ const ForgotPasswordPage = () => {
           <h3 className="font-poppins text-[16px] text-black/50">
             Remember Your Password?
           </h3>
-          <Link
-            href="/login"
-            className="flex justify-center items-center h-full w-[100px] rounded-[8px] bg-[rgba(35,106,242,1)] text-white font-[400] text-center hover:bg-blue-700 transition-colors font-poppins"
-          >
+            <Link
+              href="/"
+              className="rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-200"
+              aria-label="Go to login"
+            >
+
             Login Now
           </Link>
         </div>
@@ -81,6 +83,7 @@ const ForgotPasswordPage = () => {
 };
 
 export default ForgotPasswordPage;
+
 
 
 
