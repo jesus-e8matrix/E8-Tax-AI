@@ -69,6 +69,16 @@ export default function LoginPage() {
               {/* Utility links */}
               <div className="flex items-center justify-between">
                 <button type="button" className="text-sm font-medium text-neutral-500 hover:text-neutral-800">Forgot Password?</button>
+
+
+                  <Link
+                    href="/forgot-password"
+                    className="text-sm font-medium text-neutral-500 hover:text-neutral-800"
+                    aria-label="Go to forgot password page"
+                  >
+                    Forgot Password?
+                  </Link>
+
               </div>
 
               {/* Login button */}
