@@ -41,7 +41,7 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="hidden md:flex md:w-64 md:flex-col md:gap-2 border-r border-neutral-200 bg-white p-4">
+      <aside className="fixed left-0 top-0 hidden h-screen w-64 md:flex md:flex-col md:gap-2 border-r border-neutral-200 bg-white p-4">
       <div className="mt-2 text-xs font-semibold text-neutral-500">MAIN MENU</div>
       <nav className="mt-2 space-y-1">
         {main.map((it) => (
