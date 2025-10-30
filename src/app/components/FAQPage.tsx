@@ -27,42 +27,32 @@ function FAQItem({ q, a }: { q: string; a: string }) {
   );
 }
 
-const SAMPLE_FAQS = [
-  {
-    q: 'Is the loss on the sale of my home deductible?',
-    a: 'Maybe. Losses on personal use property are generally not deductible. Losses related to investment or business property may be.',
-  },
-  {
-    q: 'I own stock that became worthless last year. Is this a bad debt? How do I report my loss?',
-    a: 'Worthless securities are treated as a capital loss on the last day of the tax year.',
-  },
-  {
-    q: 'How do I figure the cost basis when the shares I am selling were purchased at various times and prices?',
-    a: 'Use specific identification when possible; otherwise default to FIFO.',
-  },
-  {
-    q: 'How are reinvested dividends reported on my tax return?',
-    a: 'They are taxable in the year received and increase your cost basis.',
-  },
-  {
-    q: 'May a noncustodial parent claim the child tax credit?',
-    a: 'Only with Form 8332 (or equivalent) and dependency tests met.',
-  },
-];
+
+
+
+
+import { FAQS } from '@/app/data/faqs';
+
+// …
 
 export default function FAQPage() {
-  const faqs = useMemo(() => SAMPLE_FAQS.concat(SAMPLE_FAQS).concat(SAMPLE_FAQS), []);
+  // If you need to transform/filter later, keep useMemo; otherwise you can use FAQS directly.
+  // const faqs = useMemo(() => FAQS, []);
+  const faqs = FAQS;
+
   return (
     <AppShell>
       <div className="mb-6">
         <h1 className="text-2xl font-bold">Frequently Asked Questions</h1>
         <div className="mt-2 h-0.5 w-40 rounded bg-gradient-to-r from-lime-400 to-blue-500" />
       </div>
+
       <div className="space-y-3">
         {faqs.map((f, i) => (
           <FAQItem key={i} q={f.q} a={f.a} />
         ))}
       </div>
+
       <div className="py-10" />
     </AppShell>
   );
