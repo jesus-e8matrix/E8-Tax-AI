@@ -43,7 +43,7 @@ export default function FAQPage() {
   return (
     <AppShell>
       <div className="mb-6">
-        <h1 className="text-2xl font-bold">Frequently Asked Questions</h1>
+        <h1 className="text-2xl font-bold text-[#000]">Frequently Asked Questions</h1>
         <div className="mt-2 h-0.5 w-40 rounded bg-gradient-to-r from-lime-400 to-blue-500" />
       </div>
 
