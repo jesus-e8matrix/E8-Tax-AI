@@ -2,11 +2,11 @@
 
 import React, { useMemo, useState } from 'react';
 import AppShell from './layout/AppShell';
-import { FAQS } from '@/app/data/faqs'; // type: { q: string; a: string; category: string }[]
+import { FAQS } from '@/app/data/faqs'; // [{ q, a, category }]
 
 type FaqItem = { q: string; a: string; category?: string };
 
-/* --- helpers --- */
+// --- helpers ---
 function slugify(input: string) {
   return (input || '')
     .toLowerCase()
@@ -15,12 +15,9 @@ function slugify(input: string) {
     .replace(/(^-|-$)+/g, '');
 }
 
-// Normalize category labels (trim, collapse whitespace, alias common variants)
 function normalizeCategory(cat?: string): string {
   const c = (cat || 'General').trim().replace(/\s+/g, ' ');
   const lc = c.toLowerCase();
-
-  // Aliases that should map into "Filing Requirements"
   if (
     lc === 'filing requirements' ||
     lc === 'filing requirements q&a' ||
@@ -31,28 +28,20 @@ function normalizeCategory(cat?: string): string {
   return c;
 }
 
-// If question is empty (or extremely long/dirty), derive a readable title from the answer
 function deriveQuestion(q: string, a: string): string {
   const qTrim = (q || '').trim();
   if (qTrim && qTrim.length <= 280) return qTrim;
-
   const aTrim = (a || '').trim();
   if (!aTrim) return qTrim || 'Question';
-
-  // Take first sentence or first line as a safe fallback
   const firstLine = aTrim.split('\n')[0];
   const sentence = firstLine.split(/(?<=\.)\s|(?<=\?)\s|(?<=!)\s/)[0] || firstLine;
-
-  // If it doesn’t end with punctuation, add a question mark to make it look like a prompt
   const title = sentence.length > 280 ? sentence.slice(0, 277) + '…' : sentence;
   return /[.?!]$/.test(title) ? title : `${title}?`;
 }
 
-/* --- UI --- */
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   const title = deriveQuestion(q, a);
-
   return (
     <div className="rounded-xl border border-neutral-200 bg-white">
       <button
@@ -75,10 +64,17 @@ function FAQItem({ q, a }: { q: string; a: string }) {
   );
 }
 
-
-
 export default function FAQPage() {
-  // grouped categories logic stays the same...
+  // ✅ Define `grouped`
+  const grouped = useMemo(() => {
+    const map = new Map<string, FaqItem[]>();
+    (FAQS as FaqItem[]).forEach((it) => {
+      const cat = normalizeCategory(it.category);
+      if (!map.has(cat)) map.set(cat, []);
+      map.get(cat)!.push(it);
+    });
+    return Array.from(map.entries()).sort((a, b) => a[0].localeCompare(b[0]));
+  }, []);
 
   return (
     <AppShell>
@@ -87,9 +83,8 @@ export default function FAQPage() {
         <div className="mt-2 h-0.5 w-40 rounded bg-gradient-to-r from-lime-400 to-blue-500" />
       </div>
 
-      {/* --- START: container + CTA --- */}
       <div className="relative">
-        {/* Add right padding on desktop so content doesn't sit under the fixed CTA */}
+        {/* main content with padding so it doesn't sit under the fixed CTA */}
         <div className="space-y-8 lg:pr-[360px]">
           {grouped.map(([category, items]) => (
             <section key={category} id={slugify(category)} className="space-y-3">
@@ -101,14 +96,13 @@ export default function FAQPage() {
           ))}
         </div>
 
-        {/* Fixed CTA (desktop). Note: max-w-4xl = 56rem */}
+        {/* Fixed CTA on the right (desktop) — matches max-w-4xl (56rem) in AppShell */}
         <aside
           aria-label="Need help?"
           className="hidden lg:block fixed top-24 right-[calc((100vw-56rem)/2)] w-80 z-30"
         >
           <div className="rounded-xl border border-neutral-200 bg-white p-5 shadow-lg">
             <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-md bg-neutral-100">
-              {/* replace with your icon if you have one */}
               <span className="text-xl">💬</span>
             </div>
             <h3 className="text-base font-semibold text-neutral-900">Do you have more questions?</h3>
@@ -124,7 +118,6 @@ export default function FAQPage() {
           </div>
         </aside>
       </div>
-      {/* --- END: container + CTA --- */}
 
       <div className="py-10" />
     </AppShell>
