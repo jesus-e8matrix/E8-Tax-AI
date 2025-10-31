@@ -79,7 +79,7 @@ export default function FAQPage() {
   return (
     <AppShell>
       <div className="mb-6">
-        <h1 className="text-2xl font-bold text-blue-700">Frequently Asked Questions</h1>
+        <h1 className="text-2xl font-bold text-black">Frequently Asked Questions</h1>
         <div className="mt-2 h-0.5 w-40 rounded bg-gradient-to-r from-lime-400 to-blue-500" />
       </div>
 
@@ -88,7 +88,7 @@ export default function FAQPage() {
         <div className="space-y-8 lg:pr-[380px]">
           {grouped.map(([category, items]) => (
             <section key={category} id={slugify(category)} className="space-y-3">
-              <h2 className="text-base font-semibold underline underline-offset-4">{category}</h2>
+              <h2 className="text-base font-semibold text-black underline underline-offset-4">{category}</h2>
               {items.map((f, i) => (
                 <FAQItem key={`${category}-${i}`} q={f.q} a={f.a} />
               ))}
