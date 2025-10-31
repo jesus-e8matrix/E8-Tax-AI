@@ -2,7 +2,7 @@
 
 import AppShell from '../components/layout/AppShell';
 
-type Row = (string | JSX.Element)[];
+type Row = (string | React.ReactNode)[];
 
 function Card({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
