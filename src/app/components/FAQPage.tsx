@@ -99,7 +99,7 @@ export default function FAQPage() {
         {/* Fixed CTA on the right (desktop) — matches max-w-4xl (56rem) in AppShell */}
         <aside
             aria-label="Need help?"
-            className="hidden lg:block fixed top-24 right-[calc((100vw-72rem)/2-24px)] w-80 z-30"
+            className="hidden lg:block fixed top-24 right-[calc((100vw-72rem)/2-74px)] w-80 z-30"
           >
 
           <div className="rounded-xl border border-neutral-200 bg-white p-5 shadow-lg">
