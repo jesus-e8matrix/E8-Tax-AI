@@ -1,0 +1,24 @@
+Question,Answer,Source URL
+"When are quarterly estimated tax payments due?","For estimated tax purposes, the year is divided into four payment periods, each with a specific due date. If you don't pay enough tax by each due date, you may owe a penalty even if you’re due a refund when you file your annual return.
+Payment periods and due dates:
+- Jan. 1 – Mar. 31 → April 15
+- Apr. 1 – May 31 → June 15
+- Jun. 1 – Aug. 31 → Sept. 15
+- Sept. 1 – Dec. 31 → Jan. 15 of the following year
+Fiscal year taxpayers and farmers/fishermen have special rules. Payments are on time if made on the next business day when a due date falls on a weekend or holiday.","https://www.irs.gov/faqs/estimated-tax"
+"If I anticipate a sizable capital gain on the sale of an investment during the year, do I need to make a quarterly estimated tax payment during the tax year?","Generally, you must make estimated tax payments if:
+1. You expect to owe at least $1,000 after subtracting withholding and refundable credits, **and**
+2. Your withholding and refundable credits are less than 90% of your current year tax or 100% of last year's tax (110% if AGI > $150,000; $75,000 if married filing separately).
+You can annualize income using Publication 505’s Annualized Estimated Tax Worksheet and attach Form 2210 with Schedule AI. You may also increase your withholding instead of estimated payments to avoid penalties.","https://www.irs.gov/faqs/estimated-tax"
+"How do I know if I have to make quarterly individual estimated tax payments?","You must make estimated tax payments if you expect to owe at least $1,000 after subtracting withholding and refundable credits, **and** your withholding/credits are less than:
+- 90% of your current year’s tax, or
+- 100% of last year’s tax (110% if AGI > $150,000; $75,000 if MFS).
+Special rules apply to farmers, fishermen, household employers, and nonresident aliens.","https://www.irs.gov/faqs/estimated-tax"
+"When I file my personal tax return, how do I report the estimated payments I made during the year?","Report all your estimated tax payments on Form 1040, line 26, including any overpayment credited from your prior year’s return.","https://www.irs.gov/faqs/estimated-tax"
+"Are there any special provisions related to estimated tax payments for farmers and fishermen?","Yes. If at least two-thirds of your gross income is from farming or fishing, you have only one estimated payment due — January 15 of the following year.
+You won’t owe a penalty if the tax shown on your return minus your withholding is less than $1,000, or if you file and pay all tax due by March 2 of the following year. Fiscal year farmers/fishermen can pay within 15 days after year-end or file and pay within two months.","https://www.irs.gov/faqs/estimated-tax"
+"Should self-employment taxes be paid quarterly or yearly?","Self-employed individuals generally pay estimated tax quarterly, covering both income tax and self-employment tax. Alternatively, they may pay the full amount with the first quarterly payment. Farmers and fishermen follow special annual payment rules.","https://www.irs.gov/faqs/estimated-tax"
+"How do partnerships file and pay quarterly estimated tax payments?","Partnerships file Form 1065 to report income and expenses but do not pay income tax directly. Partners report their share via Schedule K-1 or K-3 and pay any estimated taxes using Form 1040-ES.
+Partners can pay using options such as Direct Pay, EFTPS, IRS2Go app, or by credit/debit card.","https://www.irs.gov/faqs/estimated-tax"
+"Is an S corporation required to pay quarterly estimated tax?","An S corporation must make estimated payments if total taxes (on built-in gains, excess net passive income, or investment credit recapture) equal $500 or more.","https://www.irs.gov/faqs/estimated-tax"
+"What is meant by 'no tax liability' in the exceptions to the estimated tax penalty?","You had no tax liability for the prior year if your total tax was zero or you weren’t required to file a return. For this exception, your prior year must have been a 12-month taxable year, and you must have been a U.S. citizen or resident the entire year.","https://www.irs.gov/faqs/estimated-tax"
