@@ -65,7 +65,7 @@ export default function FAQPage() {
         {grouped.map(([category, items]) => (
           <section key={category} id={slugify(category)} className="space-y-3">
             {/* Category heading — bold + underline like your example */}
-            <h2 className="text-base font-semibold underline underline-offset-4">
+            <h2 className="text-base font-semibold underline underline-offset-4 text-[#000]">
               {category}
             </h2>
 
