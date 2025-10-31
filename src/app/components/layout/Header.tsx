@@ -6,7 +6,7 @@ export default function Header() {
       {/* Brand */}
       <div className="flex items-center gap-3">
         <div className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-600 text-white font-bold">I</div>
-        <span className="hidden sm:block text-lg font-semibold">ITAI</span>
+        <span className="hidden sm:block text-lg font-semibold text-[#000]">ITAI</span>
       </div>
 
       {/* Search */}
