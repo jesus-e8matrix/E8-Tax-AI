@@ -7,7 +7,7 @@ const ICONS = {
   bell: '/header/bell.png',
   inbox: '/header/inbox.png',
   settings: '/icons/setting.png',
-  avatar: '/header/avatar.png',
+  avatar: '/images/profile-placeholder.png',
 };
 
 export default function Header() {
