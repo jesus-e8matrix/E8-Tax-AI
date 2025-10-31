@@ -108,7 +108,7 @@ export default function FAQPage() {
             </div>
             <h3 className="text-base font-semibold text-neutral-900">Do you have more questions?</h3>
             <p className="mt-1 text-sm text-neutral-600">
-              Reach out with any questions about your account, filing, or system issues. We’re here to help.
+              Reach out with any questions about your account, filing, or system issues. We’re  here to help.
             </p>
             <a
               href="/chat"
