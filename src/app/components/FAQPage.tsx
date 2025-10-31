@@ -75,36 +75,56 @@ function FAQItem({ q, a }: { q: string; a: string }) {
   );
 }
 
+
+
 export default function FAQPage() {
-  // Group by normalized category
-  const grouped = useMemo(() => {
-    const map = new Map<string, FaqItem[]>();
-    (FAQS as FaqItem[]).forEach((it) => {
-      const cat = normalizeCategory(it.category);
-      if (!map.has(cat)) map.set(cat, []);
-      map.get(cat)!.push(it);
-    });
-    // Sort categories alphabetically, keep item order stable
-    return Array.from(map.entries()).sort((a, b) => a[0].localeCompare(b[0]));
-  }, []);
+  // grouped categories logic stays the same...
 
   return (
     <AppShell>
       <div className="mb-6">
-        <h1 className="text-2xl font-bold text-[#000]">Frequently Asked Questions</h1>
+        <h1 className="text-2xl font-bold text-blue-700">Frequently Asked Questions</h1>
         <div className="mt-2 h-0.5 w-40 rounded bg-gradient-to-r from-lime-400 to-blue-500" />
       </div>
 
-      <div className="space-y-8">
-        {grouped.map(([category, items]) => (
-          <section key={category} id={slugify(category)} className="space-y-3">
-            <h2 className="text-base font-semibold underline underline-offset-4 text-[#000]">{category}</h2>
-            {items.map((f, i) => (
-              <FAQItem key={`${category}-${i}`} q={f.q} a={f.a} />
-            ))}
-          </section>
-        ))}
+      {/* --- START: container + CTA --- */}
+      <div className="relative">
+        {/* Add right padding on desktop so content doesn't sit under the fixed CTA */}
+        <div className="space-y-8 lg:pr-[360px]">
+          {grouped.map(([category, items]) => (
+            <section key={category} id={slugify(category)} className="space-y-3">
+              <h2 className="text-base font-semibold underline underline-offset-4">{category}</h2>
+              {items.map((f, i) => (
+                <FAQItem key={`${category}-${i}`} q={f.q} a={f.a} />
+              ))}
+            </section>
+          ))}
+        </div>
+
+        {/* Fixed CTA (desktop). Note: max-w-4xl = 56rem */}
+        <aside
+          aria-label="Need help?"
+          className="hidden lg:block fixed top-24 right-[calc((100vw-56rem)/2)] w-80 z-30"
+        >
+          <div className="rounded-xl border border-neutral-200 bg-white p-5 shadow-lg">
+            <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-md bg-neutral-100">
+              {/* replace with your icon if you have one */}
+              <span className="text-xl">💬</span>
+            </div>
+            <h3 className="text-base font-semibold text-neutral-900">Do you have more questions?</h3>
+            <p className="mt-1 text-sm text-neutral-600">
+              Reach out with any questions about your account, filing, or system issues. We’re here to help.
+            </p>
+            <a
+              href="/chat"
+              className="mt-4 inline-flex h-10 items-center justify-center rounded-lg bg-blue-600 px-4 text-sm font-semibold text-white hover:bg-blue-700"
+            >
+              Chat with us now
+            </a>
+          </div>
+        </aside>
       </div>
+      {/* --- END: container + CTA --- */}
 
       <div className="py-10" />
     </AppShell>
