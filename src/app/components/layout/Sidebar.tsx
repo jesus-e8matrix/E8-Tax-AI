@@ -17,6 +17,7 @@ const ICONS = {
   profile: '/icons/my-profile.png',
   helpCenter: '/icons/help-center.png',
   setting: '/icons/setting.png',
+  faq: '/icons/faq.png',
 };
 
 export default function Sidebar() {
