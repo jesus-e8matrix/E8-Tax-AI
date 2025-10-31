@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 const ICONS = {
   logo: '/header/logo.png',
-  bell: '/header/bell.svg',
-  inbox: '/header/inbox.svg',
-  settings: '/header/settings.svg',
-  avatar: '/header/avatar.jpg',
+  bell: '/header/bell.png',
+  inbox: '/header/inbox.png',
+  settings: '/icons/setting.png',
+  avatar: '/header/avatar.png',
 };
 
 export default function Header() {
