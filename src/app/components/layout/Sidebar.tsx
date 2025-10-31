@@ -35,7 +35,7 @@ export default function Sidebar() {
   const help = [
     { label: 'Help & Support', href: '/help',     icon: ICONS.helpCenter },
     // No FAQ icon provided in ZIP; keeping ❓ until you add one
-    { label: 'FAQ',            href: '/faq',      emoji: '❓' as const },
+    { label: 'FAQ',            href: '/faq',      icon: ICONS.faq },
     { label: 'Setting',        href: '/settings', icon: ICONS.setting },
   ];
 
