@@ -85,13 +85,14 @@ export default function ProfilePage() {
         <div className="flex flex-col items-start gap-4">
           <div className="h-48 w-48 overflow-hidden rounded-full ring-1 ring-black/10">
             <img
-              src="/header/avatar.jpg" // replace if you have another profile image path
+              src="/images/profile-placeholder.png"
               alt="Profile photo"
               className="h-full w-full object-cover"
               width={192}
               height={192}
             />
           </div>
+
 
           <button
             type="button"
