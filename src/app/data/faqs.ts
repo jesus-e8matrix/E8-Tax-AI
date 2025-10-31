@@ -132,3 +132,4 @@ Partners can pay using options such as Direct Pay, EFTPS, IRS2Go app, or by cred
   { q: `How are reinvested dividends reported on my tax return?`, a: `Reinvested dividends used to purchase additional shares must be reported as dividend income. Report them with your other dividends on Form 1040 or 1040-SR. If total dividends exceed $1,500, include Schedule B. Keep records for basis calculation when selling shares.`, category: `Capital Gains Q&A Capital Gains` },
   { q: `I sold stock I received over several years through a dividend reinvestment plan. How do I compute the basis for this stock?`, a: `The basis is the cost of the shares purchased through reinvested dividends plus any adjustments. If you can’t identify which shares were sold, use FIFO. If detailed records are missing, reconstruct them using broker or public records. In some cases, you may elect to use the average basis method.`, category: `Capital Gains Q&A Capital Gains` },
 ];
+
