@@ -85,7 +85,7 @@ export default function FAQPage() {
 
       <div className="relative">
         {/* main content with padding so it doesn't sit under the fixed CTA */}
-        <div className="space-y-8 lg:pr-[360px]">
+        <div className="space-y-8 lg:pr-[380px]">
           {grouped.map(([category, items]) => (
             <section key={category} id={slugify(category)} className="space-y-3">
               <h2 className="text-base font-semibold underline underline-offset-4">{category}</h2>
@@ -98,9 +98,10 @@ export default function FAQPage() {
 
         {/* Fixed CTA on the right (desktop) — matches max-w-4xl (56rem) in AppShell */}
         <aside
-          aria-label="Need help?"
-          className="hidden lg:block fixed top-24 right-[calc((100vw-56rem)/2)] w-80 z-30"
-        >
+            aria-label="Need help?"
+            className="hidden lg:block fixed top-24 right-[calc((100vw-72rem)/2-24px)] w-80 z-30"
+          >
+
           <div className="rounded-xl border border-neutral-200 bg-white p-5 shadow-lg">
             <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-md bg-neutral-100">
               <span className="text-xl">💬</span>
