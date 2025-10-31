@@ -14,12 +14,13 @@ function TextInput(props: React.InputHTMLAttributes<HTMLInputElement>) {
       {...rest}
       className={
         'w-full rounded-xl border border-neutral-300 bg-white px-3 py-2 text-sm outline-none ' +
-        'placeholder:text-neutral-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-200 ' +
+        'text-black placeholder:text-neutral-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-200 ' +
         className
       }
     />
   );
 }
+
 
 function Select({
   children,
@@ -31,7 +32,7 @@ function Select({
         {...rest}
         className={
           'w-full appearance-none rounded-xl border border-neutral-300 bg-white px-3 py-2 pr-9 text-sm outline-none ' +
-          'focus:border-blue-500 focus:ring-4 focus:ring-blue-200'
+          'text-black focus:border-blue-500 focus:ring-4 focus:ring-blue-200'
         }
       >
         {children}
